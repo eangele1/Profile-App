@@ -1,23 +1,28 @@
 import * as React from "react";
-import {
-  View,
-  TouchableOpacity,
-  Image,
-  StyleSheet,
-  Dimensions,
-} from "react-native";
-
+import { View, TouchableOpacity, Image } from "react-native";
 import styles from "../GeneralStyles";
-
-const { width, height } = Dimensions.get("window");
+import DATA from "../utils/data";
 
 const HomeScreen = ({ navigation }) => {
-  const pushToDetails = (name, image, bio) => {
-    navigation.navigate("Details", {
-      name: name,
-      image: image,
-      bio: bio,
-    });
+  const renderIconButton = (DATA) => {
+    return (
+      <TouchableOpacity
+        onPress={() =>
+          navigation.navigate("Details", {
+            name: DATA.name,
+            image: DATA.image,
+            bio: DATA.bio,
+          })
+        }
+        activeOpacity={0.75}
+      >
+        <Image
+          resizeMode="contain"
+          source={DATA.image}
+          style={styles.ImageIconStyle}
+        />
+      </TouchableOpacity>
+    );
   };
 
   return (
@@ -25,73 +30,13 @@ const HomeScreen = ({ navigation }) => {
       <View style={styles.contentContainer}>
         {/* Box 1 */}
         <View style={{ justifyContent: "space-between" }}>
-          <TouchableOpacity
-            onPress={() =>
-              pushToDetails(
-                "Anthony",
-                require("../images/Anthony.jpg"),
-                "This is something about me."
-              )
-            }
-            activeOpacity={0.75}
-          >
-            <Image
-              resizeMode="contain"
-              source={require("../images/Anthony.jpg")}
-              style={styles.ImageIconStyle}
-            />
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() =>
-              pushToDetails(
-                "Beakal",
-                require("../images/Beakal.jpg"),
-                "This is something about me."
-              )
-            }
-            activeOpacity={0.75}
-          >
-            <Image
-              resizeMode="contain"
-              source={require("../images/Beakal.jpg")}
-              style={styles.ImageIconStyle}
-            />
-          </TouchableOpacity>
+          {renderIconButton(DATA[0])}
+          {renderIconButton(DATA[1])}
         </View>
         {/* Box 2 */}
         <View style={{ justifyContent: "space-between" }}>
-          <TouchableOpacity
-            onPress={() =>
-              pushToDetails(
-                "Yiley",
-                require("../images/Yiley.jpg"),
-                "This is something about me."
-              )
-            }
-            activeOpacity={0.75}
-          >
-            <Image
-              resizeMode="contain"
-              source={require("../images/Yiley.jpg")}
-              style={styles.ImageIconStyle}
-            />
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() =>
-              pushToDetails(
-                "Ezer",
-                require("../images/Ezer.jpg"),
-                "This is something about me."
-              )
-            }
-            activeOpacity={0.75}
-          >
-            <Image
-              resizeMode="contain"
-              source={require("../images/Ezer.jpg")}
-              style={styles.ImageIconStyle}
-            />
-          </TouchableOpacity>
+          {renderIconButton(DATA[2])}
+          {renderIconButton(DATA[3])}
         </View>
       </View>
     </View>
