@@ -32,6 +32,14 @@ const styles = StyleSheet.create({
     fontWeight: "100",
     fontFamily: "monospace",
     color: "white",
+    marginBottom: 10,
+  },
+  returnButton: {
+    alignItems: "center",
+    backgroundColor: "#DDDDDD",
+    padding: 10,
+    color: "black",
+    borderRadius: 10,
   },
 });
 
