@@ -12,7 +12,7 @@ const DetailsScreen = ({ route }) => {
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: "darkgray",
+        backgroundColor: "#151515",
       }}
     >
       <Image

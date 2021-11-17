@@ -22,7 +22,7 @@ const App = () => {
           name="Home"
           component={HomeScreen}
           options={{
-            title: "Our Team",
+            title: "Profile App",
             headerTintColor: "#fff",
             headerStyle: {
               backgroundColor: "purple",

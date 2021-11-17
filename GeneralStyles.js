@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     flex: 1,
-    backgroundColor: "darkgray",
+    backgroundColor: "#151515",
   },
   contentContainer: {
     width: width * 0.75,
@@ -21,12 +21,17 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   h1: {
-    fontSize: 25,
+    fontSize: 20,
     fontWeight: "bold",
+    fontFamily: "notoserif",
+    color: "white",
+    textAlign: "center",
   },
   h3: {
     fontSize: 15,
     fontWeight: "100",
+    fontFamily: "monospace",
+    color: "white",
   },
 });
 

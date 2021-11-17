@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, TouchableOpacity, Image } from "react-native";
+import { View, TouchableOpacity, Image, Text } from "react-native";
 import styles from "../GeneralStyles";
 import DATA from "../utils/data";
 
@@ -21,6 +21,7 @@ const HomeScreen = ({ navigation }) => {
           source={DATA.image}
           style={styles.ImageIconStyle}
         />
+        <Text style={styles.h1}>{DATA.name}</Text>
       </TouchableOpacity>
     );
   };
