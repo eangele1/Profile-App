@@ -7,13 +7,14 @@ const HomeScreen = ({ navigation }) => {
   const renderIconButton = (DATA) => {
     return (
       <TouchableOpacity
-        onPress={() =>
+        onPress={() => {
+          navigation.setOptions({ title: "Biography" });
           navigation.navigate("Details", {
             name: DATA.name,
             image: DATA.image,
             bio: DATA.bio,
-          })
-        }
+          });
+        }}
         activeOpacity={0.75}
       >
         <Image

@@ -7,14 +7,7 @@ const DetailsScreen = ({ route, navigation }) => {
   const { name, image, bio } = route.params;
 
   return (
-    <View
-      style={{
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "#151515",
-      }}
-    >
+    <View style={styles.container}>
       <Image
         source={image}
         style={{
@@ -26,12 +19,6 @@ const DetailsScreen = ({ route, navigation }) => {
       ></Image>
       <Text style={styles.h1}>{name}</Text>
       <Text style={styles.h3}>{bio}</Text>
-      <TouchableOpacity
-        style={styles.returnButton}
-        onPress={() => navigation.goBack()}
-      >
-        <Text>Return To Profiles</Text>
-      </TouchableOpacity>
     </View>
   );
 };
