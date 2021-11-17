@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
     fontFamily: "monospace",
     color: "white",
     marginBottom: 10,
+    padding: 10,
   },
   returnButton: {
     alignItems: "center",
